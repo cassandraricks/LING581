@@ -7,10 +7,11 @@ package homework01
 import CalculateMED._
 import MinimumEditDistance._
 
-//args(0): String = [target name]
-//args(1): List[String] = List([misspellings in list format])
+// TODO add README with argument instructions
+//args => first item = target, resulting items = misspellings
 object Main {
   def main(args: Array[String]) = {
     //args(0), args(1)
+    println(rankMED(args(0), args.drop(1).toList))
   }
 }
