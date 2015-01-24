@@ -10,10 +10,12 @@ import CalculateMED._
  * Created by mcapizzi on 1/23/15.
  */
 object MinimumEditDistance {
-  
+  // TODO add Gus's resource code
+  // TODO Build MAIN
+
   //how Soundex works
   //http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions148.htm
-  
+
   //creates Soundex coder
   val soundexCoder = new Soundex()
   
