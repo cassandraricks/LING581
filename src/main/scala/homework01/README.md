@@ -17,5 +17,14 @@ The code takes multiple arguments:
 The approach:
 =================
 
+There are many different reasons why someone may end up misspelling a name, but they aren't all equal in terms of "level of error."  Below is a list of the types of errors ranked from "smallest error" (*i.e.* the first item is the most understandable error):
+
+- person uses an acceptable alternative spelling of the name (*e.g.* "Brittany" instead of "Britney")
+- person transposes two letters (*e.g.* "Brintey")
+- person forgets a letter (*e.g.* "Britey")
+- person adds an extra letter (*e.g.* "Britnbey")
+
+
+
 
 
