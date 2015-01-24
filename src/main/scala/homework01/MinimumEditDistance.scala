@@ -31,13 +31,15 @@ object MinimumEditDistance {
   def findSoundexMatches(name: String): List[String] = {
     (soundexNameTuple filter (x => x._2.matches(soundexCoder.soundex(name)))).map(_._1) filterNot (x => x.matches(name))
   }
-  
+
   def rankMED(nameToMatch: String, inputList: List[String]): List[(String, AnyVal)] = {
     //makes a list of lists contains the Soundex matches for each inputList name
     val inputListSoundexMatches = inputList.map(findSoundexMatches).flatten
     for (name <- inputList) yield
+      //if the name matches an accepted spelling of the target name, set MED to .5
       if (findSoundexMatches(nameToMatch).contains(name)) name -> 0.5
       else
+        //otherwise use the lower of the following two: MED for name to target or MED for name to accepted spellings
         if (distance(nameToMatch, name) < (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min) name -> distance(nameToMatch, name)
         else name -> (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min
   }
