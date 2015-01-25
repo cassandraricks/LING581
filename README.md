@@ -1,4 +1,4 @@
-# LING58
+# LING581
 This repository has assignments for LING 581 Spring 2015
 
 To access individual assignments
