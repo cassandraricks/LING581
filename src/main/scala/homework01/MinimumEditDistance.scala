@@ -11,7 +11,7 @@ import CalculateMED._
  */
 object MinimumEditDistance {
   // TODO add Gus's resource code
-  // TODO Build MAIN
+  // TODO figure out how to sort results either here in or in Main
 
   //how Soundex works
   //http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions148.htm
