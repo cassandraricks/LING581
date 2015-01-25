@@ -7,7 +7,6 @@ package homework01
 import CalculateMED._
 import MinimumEditDistance._
 
-// TODO add README with argument instructions
 //args => first item = target, resulting items = misspellings
 object Main {
   def main(args: Array[String]) = {
