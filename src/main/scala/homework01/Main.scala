@@ -11,6 +11,6 @@ import MinimumEditDistance._
 object Main {
   def main(args: Array[String]) = {
     //args(0), args(1)
-    println(rankMED(args(0), args.drop(1).toList))
+    println(rankMED(args(0), args.drop(1).toList).sortBy(_._2))
   }
 }

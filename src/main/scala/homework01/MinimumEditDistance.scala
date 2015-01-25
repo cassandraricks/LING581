@@ -11,7 +11,6 @@ import CalculateMED._
  */
 object MinimumEditDistance {
   // TODO add Gus's resource code
-  // TODO figure out how to sort results either here in or in Main
 
   //how Soundex works
   //http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions148.htm
@@ -32,16 +31,16 @@ object MinimumEditDistance {
     (soundexNameTuple filter (x => x._2.matches(soundexCoder.soundex(name)))).map(_._1) filterNot (x => x.matches(name))
   }
 
-  def rankMED(nameToMatch: String, inputList: List[String]): List[(String, AnyVal)] = {
+  def rankMED(nameToMatch: String, inputList: List[String]): List[(String, Double)] = {
     //makes a list of lists contains the Soundex matches for each inputList name
     val inputListSoundexMatches = inputList.map(findSoundexMatches).flatten
     for (name <- inputList) yield
       //if the name matches an accepted spelling of the target name, set MED to .5
-      if (findSoundexMatches(nameToMatch).contains(name)) name -> 0.5
+      if (findSoundexMatches(nameToMatch).contains(name)) name -> 0.5.toDouble
       else
         //otherwise use the lower of the following two: MED for name to target or MED for name to accepted spellings
-        if (distance(nameToMatch, name) < (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min) name -> distance(nameToMatch, name)
-        else name -> (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min
+        if (distance(nameToMatch, name) < (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min) name -> distance(nameToMatch, name).toDouble
+        else name -> (for (item <- inputListSoundexMatches) yield item -> distance(item, name)).sortBy(_._2).map(_._2).min.toDouble
   }
   
  }
