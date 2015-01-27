@@ -61,7 +61,7 @@ Otherwise, take the smaller distance of the following two choices:
     -the distance between the misspelling and the target
     -the smallest distance between the misspelling and any accepted alternative spelling
 
-![](https://cloud.githubusercontent.com/assets/8990766/5927048/31c3a682-a62d-11e4-9bba-6b485d691e74.jpeg)
+![](https://cloud.githubusercontent.com/assets/8990766/5927154/1a58783c-a62e-11e4-9408-5f5bb5587365.jpeg)
 Example Application
 ---------------------------------
 Below are the results of the algorithm matched with the actual Google search results for "Britney Spears" (from http://www.google.com/jobs/archive/britney.html)
