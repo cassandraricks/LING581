@@ -65,6 +65,8 @@ Example Application
 ---------------------------------
 Below are the results of the algorithm matched with the actual Google search results for "Britney Spears" (from http://www.google.com/jobs/archive/britney.html)
 
+        List((brittany,0.5), (brittney,0.5), (britany,0.5), (britteny,0.5), (brittny,0.5), (britny,1.0), (briteny,1.0), (briney,1.0), (britanny,1.0), (britiney,1.0), (britaney,1.0), (brithney,1.0), (brintney,1.0), (brintey,2.0), (britiny,2.0), (britnet,2.0), (britnay,2.0), (brtiney,2.0), (birtney,2.0))
+
 Ranking according to Google spellings | Ranking according to algorithm | Algorithm Ranking
 --- | --- | ---
 brittany | brittany | 1
