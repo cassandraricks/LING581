@@ -60,7 +60,8 @@ If the misspelling is an accepted alternative spelling, assign a distance of 0.5
 Otherwise, take the smaller distance of the following two choices:
     -the distance between the misspelling and the target
     -the smallest distance between the misspelling and any accepted alternative spelling
-    
+
+![](https://cloud.githubusercontent.com/assets/8990766/5927048/31c3a682-a62d-11e4-9bba-6b485d691e74.jpeg)
 Example Application
 ---------------------------------
 Below are the results of the algorithm matched with the actual Google search results for "Britney Spears" (from http://www.google.com/jobs/archive/britney.html)
