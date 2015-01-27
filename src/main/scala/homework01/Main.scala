@@ -11,6 +11,8 @@ import MinimumEditDistance._
 object Main {
   def main(args: Array[String]) = {
     //args(0), args(1)
+    //run this line:
+    //"britney" "brittany" "brittney" "britany" "britny" "briteny" "britteny" "briney" "brittny" "brintey" "britanny" "britiny" "britnet" "britiney" "britaney" "britnay" "brithney" "brtiney" "birtney" "brintney"
     println(rankMED(args(0), args.drop(1).toList).sortBy(_._2))
   }
 }

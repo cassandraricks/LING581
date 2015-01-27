@@ -52,7 +52,7 @@ Levenshtein distance Implementation:
 I used code posted on RosettaCode for calculating Levenshtein distance (from http://rosettacode.org/wiki/Levenshtein_distance#Scala)
 , but made an adjustment so that insertions and deletions had a cost of one while substitution had a cost of two.
 
-Algorithm Implemented Here:
+Algorithm Implemented:
 -------------------------------
 The intuition here is that a misspelling could either be an attempt at spelling the target spelling *or* an attempt at spelling an acceptable alternative spelling of the target.  And so in an attempt to capture that intuition algorithmically the following is implemented:
 
@@ -60,8 +60,34 @@ If the misspelling is an accepted alternative spelling, assign a distance of 0.5
 Otherwise, take the smaller distance of the following two choices:
     -the distance between the misspelling and the target
     -the smallest distance between the misspelling and any accepted alternative spelling
-![Click here to see algorithm flowchart]("raw.github.com/michaelcapizzi/LING581/master/src/main/resources/MEDflowchart.jpeg")
     
+Example Application
+---------------------------------
+Below are the results of the algorithm matched with the actual Google search results for "Britney Spears" (from http://www.google.com/jobs/archive/britney.html)
+
+Ranking according to Google spellings | Ranking according to algorithm | Algorithm Ranking
+--- | --- | ---
+brittany | brittany | 1
+brittney | brittney | 1
+britany | britany | 1
+britny | britteny | 1
+briteny | brittny | 1
+britteny | britny | 2
+briney | briteny | 2
+brittny | briney | 2
+brintey | britanny | 2
+britanny | britiney  | 2
+britiny | britaney  | 2
+britnet  | brithney | 2
+britiney | brintney | 2
+britaney  | brintey | 3
+britnay | britiny  | 3
+brithney | britnet  | 3
+brtiney  | britnay  | 3
+birtney  | brtiney  | 3
+brintney  | birtney | 3
+
+
 Problems with the implementation:
 ----------------------------------
 There are a few issues with this implementation:

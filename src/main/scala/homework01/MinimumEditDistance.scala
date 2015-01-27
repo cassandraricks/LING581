@@ -19,7 +19,7 @@ object MinimumEditDistance {
   val soundexCoder = new Soundex()
   
   //creates name list from file
-  val names = Source.fromFile("/src/main/resources/all_names.txt").getLines.toList
+  val names = Source.fromFile("/home/mcapizzi/Github/LING581/src/main/resources/all_names.txt").getLines.toList
   //val nameList = names.map(_.toLowerCase)
   val soundexNameTuple = for (name <- names.map(_.toLowerCase)) yield name -> soundexCoder.soundex(name)
  
