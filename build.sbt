@@ -12,4 +12,3 @@ libraryDependencies ++= Seq(
   "edu.arizona.sista" % "processors" % "3.3" classifier "models",
   "org.apache.commons" % "commons-math3" % "3.3"
 )
-
