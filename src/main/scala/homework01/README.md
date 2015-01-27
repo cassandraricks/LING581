@@ -92,8 +92,11 @@ Problems with the implementation:
 ----------------------------------
 There are a few issues with this implementation:
 
--First names collected from the 1990 Census were used to generate the bank of all first name spellings.  This data is out-of-date, and a more list from a more recent Census would be more accurate.  Regardless, while a Census list contains most spellings of first names, there is no "master list" that contains all spellings of all first names, so any list used will be less-than-perfect.
--The Soundex coding creates false positives.  While the coding for Soundex succeeds in capturing most alternative spellings, it also captures inaccurate spellings.  For example, "britney", "burton", and "barton" are all coded by Soundex as "B635" yet neither "burton" or "barton" would ever be considered alternative spellings of "britney."  And while it is unlikely that someone will type "burton" when the target name was "britney", it is possible that any misspellings the person did make could be ranked according to their distance from "burton" thus generating an inaccurately small distance ranking.
+First names collected from the 1990 Census were used to generate the bank of all first name spellings.  This data is out-of-date, and a more list from a more recent Census would be more accurate.  Regardless, while a Census list contains most spellings of first names, there is no "master list" that contains all spellings of all first names, so any list used will be less-than-perfect.
+
+The Soundex coding creates false positives.  While the coding for Soundex succeeds in capturing most alternative spellings, it also captures inaccurate spellings.  For example, "britney", "burton", and "barton" are all coded by Soundex as "B635" yet neither "burton" or "barton" would ever be considered alternative spellings of "britney."  And while it is unlikely that someone will type "burton" when the target name was "britney", it is possible that any misspellings the person did make could be ranked according to their distance from "burton" thus generating an inaccurately small distance ranking.
+
+The simplicity of the minimum edit distance calculation leads to many different misspellings with the same distance score. (see below)
 
 Next steps:
 -------------------------------
