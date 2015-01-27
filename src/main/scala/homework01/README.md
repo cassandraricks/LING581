@@ -60,7 +60,7 @@ If the misspelling is an accepted alternative spelling, assign a distance of 0.5
 Otherwise, take the smaller distance of the following two choices:
     -the distance between the misspelling and the target
     -the smallest distance between the misspelling and any accepted alternative spelling
-![alt text]("/src/main/resources/MEDflowchart.jpeg "Algorithm Flowchart")
+![alt text]("https://github.com/michaelcapizzi/LING581/blob/master/src/main/resources/MEDflowchart.jpeg" Algorithm Flowchart")
     
 Problems with the implementation:
 ----------------------------------
