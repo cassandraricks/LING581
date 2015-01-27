@@ -105,9 +105,8 @@ Next steps:
 -------------------------------
 Future enhancements to the implementation will seek to incorporate an adjusted scoring mechanism for calculating Levenshtein distance:
 
- -acceptable alternative spelling = 0.5 total distance score
- -each insertion required = 1
- -each deletion required = 1
- -each substitution required = 2
- -each transposition required (where two adjacent letters simply need to be switched) = .5
-
+-acceptable alternative spelling = 0.5 total distance score
+-each insertion required = 1
+-each deletion required = 1
+-each substitution required = 2
+-each transposition required (where two adjacent letters simply need to be switched) = .5
